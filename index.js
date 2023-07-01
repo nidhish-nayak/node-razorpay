@@ -11,6 +11,6 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-app.listen(3000, () => {
-	console.log("Listening to port 3000!");
+app.listen(process.env.PORT || 4000, () => {
+	console.log("Listening to port 4000!");
 });
