@@ -1,11 +1,5 @@
-Certainly! Here's an updated version of the README.md file with a colorful and engaging format, along with detailed explanations:
-
-````markdown
-<div align="center">
-  <img src="razorpay-logo.png" alt="Razorpay Logo" width="200px">
-  <h1>🌟 Node.js Razorpay Payment Gateway Integration API 🌟</h1>
-  <p>Supercharge your Node.js server with the power of Razorpay payment gateway!</p>
-</div>
+#🌟 Node.js Razorpay Payment Gateway Integration API 🌟
+Supercharge your Node.js server with the power of Razorpay payment gateway!
 
 ## ✨ Prerequisites
 
@@ -22,9 +16,8 @@ To embark on this mystical journey, follow these steps:
 
    ```bash
    git clone <repository-url>
-   cd razorpay-payment-gateway-api
+   cd node-razorpay
    ```
-````
 
 2. 🧙‍♂️ Cast the spell to install the dependencies:
 
@@ -42,7 +35,7 @@ To embark on this mystical journey, follow these steps:
 4. 🎩 Wave your wand to start the server:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
    The portal to the server will open at http://localhost:4000. Enter at your own risk!
@@ -51,7 +44,7 @@ To embark on this mystical journey, follow these steps:
 
 The API is home to the following magical portal:
 
-### ✨ GET /orders
+#### ✨ GET /orders
 
 🔮 This portal allows you to create a Razorpay order with just a flick of your wand. Simply provide the desired `price` and behold the order details that will be revealed to you!
 
@@ -96,7 +89,4 @@ Join the league of magical developers! Contributions are welcomed and celebrated
 
 This project is licensed under the [MIT License](LICENSE). Cast your spells responsibly!
 
-```
-
-Feel free to further customize the design, images, or sections according to your preferences and project's theme. Let your imagination flow and create a README that truly stands out!
-```
+`Feel free to further customize the design, images, or sections according to your preferences and project's theme. Let your imagination flow and create a README that truly stands out!`
