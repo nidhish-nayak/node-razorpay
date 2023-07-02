@@ -7,12 +7,13 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
-// The Razorpay instance is created outside the /orders route handler, and the instance is reused for each request.
+// The Razorpay instance is created outside - reusing for each request.
 const razorpayInstance = new Razorpay({
 	key_id: process.env.RAZORPAY_KEY_ID,
 	key_secret: process.env.RAZORPAY_SECRET,
 });
 
+// Creating order using razorpay instance to make payments
 app.get("/orders", async (req, res) => {
 	const { price } = req.query;
 
@@ -22,10 +23,25 @@ app.get("/orders", async (req, res) => {
 			currency: "INR",
 			receipt: "receipt#1",
 		});
-		return res.status(200).json(order);
+		res.status(200).json(order);
 	} catch (error) {
-		return res.status(500).json({
-			message: "Something Went Wrong",
+		res.status(500).json({
+			message: "Error when creating a new order",
+			errorValue: error,
+		});
+	}
+});
+
+// Payment fetching on auto-captured payments using orderid
+app.get("/orders/:orderId/payments", async (req, res) => {
+	const { orderId } = req.query;
+
+	try {
+		const payment = await razorpayInstance.orders.fetchPayments(orderId);
+		res.status(200).json(payment);
+	} catch (error) {
+		res.status(500).json({
+			message: "Error when fetching payments from the order created",
 			errorValue: error,
 		});
 	}
