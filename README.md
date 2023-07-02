@@ -47,7 +47,7 @@ The API is home to the following magical portal:
 
 #### ✨ GET /orders
 
-🔮 This portal allows you to create a Razorpay order with just a flick of your wand. Simply provide the desired `price` and behold the order details that will be revealed to you!
+- This 🔮 portal allows you to create a Razorpay order with just a flick of your wand. Simply provide the desired `price` and behold the order details that will be revealed to you!
 
 #### 🎁 Request Parameters
 
