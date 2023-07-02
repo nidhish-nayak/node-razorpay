@@ -1,7 +1,7 @@
 {
-	"name": "stripe",
+	"name": "node-razorpay",
 	"version": "1.0.0",
-	"description": "Server for stripe backend endpoints",
+	"description": "Server for razorpay backend endpoints",
 	"main": "server.js",
 	"scripts": {
 		"dev": "nodemon server.js"
