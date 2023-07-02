@@ -88,8 +88,6 @@ Join the league of magical developers! Contributions are welcomed and celebrated
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE). Cast your spells responsibly!
+#### This project is licensed under the [MIT License](LICENSE). Cast your spells responsibly!
 
-```plaintext
 Feel free to further customize the design, images, or sections according to your preferences and project's theme. Let your imagination flow and create a README that truly stands out!
-```
