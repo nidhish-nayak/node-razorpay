@@ -25,6 +25,6 @@ app.use("/orders", ordersRoute);
 
 app.use(errorMiddleware);
 
-app.listen(config.port, () => {
-	console.log(`Server is listening at http://localhost:${config.port}`);
-});
+// app.listen(config.port, () => {
+// 	console.log(`Server is listening at http://localhost:${config.port}`);
+// });
