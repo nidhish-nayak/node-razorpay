@@ -8,13 +8,9 @@ const app = express();
 
 app.use(express.json());
 
-// CORS for production
 app.use(
 	cors({
-		origin: [
-			"https://www.fabric-clothing.netlify.app",
-			"https://www.fabric-clothing.netlify.app/checkout",
-		],
+		origin: "https://fabric-clothing.netlify.app",
 		methods: ["GET", "POST"],
 		allowedHeaders: ["Content-Type", "X-Requested-With"],
 	})
