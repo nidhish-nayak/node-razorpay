@@ -9,16 +9,7 @@ const app = express();
 app.use(express.json());
 
 // CORS for production
-app.use(
-	cors({
-		origin: [
-			"http://localhost:3000/checkout",
-			"https://www.fabric-clothing.netlify.app",
-		],
-		methods: ["GET", "POST"],
-		allowedHeaders: ["Content-Type", "X-Requested-With"],
-	})
-);
+app.use(cors());
 
 // Order APIs
 app.use("/orders", ordersRoute);
