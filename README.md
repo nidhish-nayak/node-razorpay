@@ -1,4 +1,4 @@
-# 🌟 nodeJS Razorpay Payment Gateway Integration 🌟
+# 🌟 Razorpay Payment Gateway API with NodeJS 🌟
 
 Supercharge your Node.js server with the power of Razorpay payment gateway!
 
