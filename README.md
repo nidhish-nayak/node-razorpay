@@ -43,7 +43,7 @@ To embark on this mystical journey, follow these steps:
 
 ## 🧙‍♂️ API Endpoints
 
-The API is home to the following magical portal:
+The API is home to the following magical portals:
 
 #### ✨ GET /orders
 
@@ -57,6 +57,19 @@ The API is home to the following magical portal:
 
 - Success: 200 OK! The order details will be unveiled in the response body, ready for you to explore.
 - Error: 500 Internal Server Error! An error message will be revealed, guiding you through the troubles.
+
+#### ✨ GET /orders/:orderId/payments
+
+- This 🌟 portal allows you to fetch the payments associated with a specific order. Provide the `orderId` and witness the magical details of the payments unfold before your eyes!
+
+#### 🎁 Request Parameters
+
+- `orderId` (query parameter): The ID of the order for which you want to fetch the payments.
+
+#### 🔮 Response
+
+- Success: 200 OK! The payment details will be revealed in the response body, showcasing the captivating information.
+- Error: 500 Internal Server Error! An error message will be unveiled, guiding you through the troubles.
 
 ## 🧙‍♂️ Usage
 
@@ -82,6 +95,44 @@ GET /orders?price=1000
 }
 ```
 
+To fetch the payments associated with a specific order, conjure a GET request to the `/orders/:orderId/payments` portal, replacing `:orderId` with the actual ID of the order
+
+. The API will unleash its powers and reveal the mesmerizing payment details.
+
+🪄 Example Incantation:
+
+```http
+GET /orders/order_1234567890/payments
+```
+
+⚡️ Example Response:
+
+```json
+{
+	"count": 2,
+	"entity": "collection",
+	"items": [
+		{
+			"id": "pay_1234567890",
+			"entity": "payment",
+			"order_id": "order_1234567890",
+			"amount": 1000,
+			"status": "captured"
+			// ... other captivating payment details
+		},
+		{
+			"id": "pay_0987654321",
+			"entity": "payment",
+			"order_id": "order_1234567890",
+			"amount": 2000,
+			"status": "captured"
+			// ... other captivating payment details
+		}
+	]
+	// ... other captivating collection details
+}
+```
+
 ## ✨ Contributing
 
 Join the league of magical developers! Contributions are welcomed and celebrated in this mystical realm. If you encounter any issues or have ideas for enchantments, feel free to open an issue or cast a pull request.
@@ -90,4 +141,6 @@ Join the league of magical developers! Contributions are welcomed and celebrated
 
 #### This project is licensed under the [MIT License](LICENSE). Cast your spells responsibly!
 
-Feel free to further customize the design, images, or sections according to your preferences and project's theme. Let your imagination flow and create a README that truly stands out!
+Feel free to further customize the README according to your project's requirements and add any additional information or sections as needed.
+
+Happy coding!
