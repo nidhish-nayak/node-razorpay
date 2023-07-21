@@ -8,13 +8,17 @@ const app = express();
 
 app.use(express.json());
 
-app.use(
-	cors({
-		origin: "https://fabric-clothing.netlify.app",
-		methods: ["GET", "POST"],
-		allowedHeaders: ["Content-Type", "X-Requested-With"],
-	})
-);
+process.env.NODE_ENV === "production"
+	? app.use(
+			cors({
+				origin: process.env.APPLICATION_URL,
+				methods: ["GET", "POST"],
+				allowedHeaders: ["Content-Type", "X-Requested-With"],
+			})
+	  )
+	: app.use(cors("*"));
+
+console.log(process.env.NODE_ENV);
 
 // Order APIs
 app.use("/orders", ordersRoute);
