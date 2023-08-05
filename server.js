@@ -8,15 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-process.env.NODE_ENV === "production"
-	? app.use(
-			cors({
-				origin: process.env.APPLICATION_URL,
-				methods: ["GET", "POST"],
-				allowedHeaders: ["Content-Type", "X-Requested-With"],
-			})
-	  )
-	: app.use(cors("*"));
+app.use(cors("*"));
 
 console.log(process.env.NODE_ENV);
 
